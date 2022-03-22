@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/Tangtang511/reqFile/tree/master/pkg/handlers"
+	//"reqFile/pkg/handles"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	var router = gin.Default()
-	handlers.HttpTest(router)
+	//handlers.HttpTest(router)
 	router.Run(":8080")
 }
