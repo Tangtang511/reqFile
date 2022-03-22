@@ -35,7 +35,7 @@ func HttpTest(router *gin.Engine) {
 			return
 		}
 		c.JSON(http.StatusOK, gin.H{
-			"message": data,
+			"message": string(data),
 		})
 	})
 }
