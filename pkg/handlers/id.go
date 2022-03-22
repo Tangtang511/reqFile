@@ -11,7 +11,8 @@ func HttpTest(router *gin.Engine) {
 	router.GET("/download", func(c *gin.Context) {
 		var req *http.Request
 		var err error
-		if req, err = http.NewRequest(http.MethodGet, "http://www.baidu.com/", nil); err != nil {
+		var url string = "http://www.baidu.com/"
+		if req, err = http.NewRequest(http.MethodGet, url, nil); err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{
 				"message": "error",
 			})
