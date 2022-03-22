@@ -25,6 +25,7 @@ func HttpTest(router *gin.Engine) {
 			c.JSON(http.StatusInternalServerError, gin.H{
 				"message": "error",
 			})
+			return
 		}
 		defer resp.Body.Close()
 		var data []byte
