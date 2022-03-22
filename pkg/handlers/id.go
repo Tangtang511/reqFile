@@ -9,7 +9,6 @@ import (
 
 func HttpTest(router *gin.Engine) {
 	router.GET("/download", func(c *gin.Context) {
-		c.File("/Users/bytedance/abc.txt")
 		var req *http.Request
 		var err error
 		if req, err = http.NewRequest(http.MethodGet, "http://www.baidu.com/", nil); err != nil {
